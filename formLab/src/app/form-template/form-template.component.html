@@ -1,0 +1,83 @@
+<p>form-template works!</p>
+
+<form #myform=ngForm 
+(ngSubmit)="myform.valid && addProduct(myform)">
+
+Product ID:<input name="productId"
+ class="form-control" required minlength="1"
+      ngModel #name="ngModel">
+
+        <div *ngIf="name.errors!=null && 
+        name.errors.required">
+        Id is required.
+        </div>
+
+        <div *ngIf="name.errors!=null &&
+        name.errors.minlength">
+        minimum length should be 1
+        </div>
+
+<br>Product Name:<input name="productName"
+ class="form-control" required minlength="4"
+      ngModel #name2="ngModel" required>
+
+      <div *ngIf="name2.errors!=null && 
+      name2.errors.required">
+      Name is required.
+      </div>
+
+      <div *ngIf="name2.errors!=null &&
+      name2.errors.minlength">
+      minimum length should be 4
+      </div>
+
+<br>Product Cost:<input name="productCost"
+    class="form-control" ngModel #name3="ngModel" required>
+     
+    <div *ngIf="name3.errors!=null && 
+    name3.errors.required">
+    Cost is required.
+    </div>
+
+<br>Product Online
+    <input name="productOnline" type="radio"  class="form-control" value="Yes" ngModel #name4="ngModel" required>
+    <label>Yes</label>
+    <input name="productOnline"  type="radio" class="form-control" value="No" ngModel #name4="ngModel" required>
+    <label>No</label>
+        <div *ngIf="name4.errors!=null && 
+        name4.errors.required">
+        Select any one status.
+        </div>    
+
+<div>
+        <br>Product Category
+        <select name="productCategory" type="text"  class="form-control" ngModel #name5="ngModel">
+            <option>Grocery</option>
+            <option>Mobile</option>
+            <option>Electronics</option>   
+        </select>
+
+</div>
+
+<div>    
+            <br>Available in Store
+            <input type="checkbox" name="productAvail" class="form-control" ngModel #name6="ngModel" required>
+            <label>Big-Bazar</label>
+            <input type="checkbox" name="productAvail" class="form-control" ngModel #name6="ngModel" required>
+            <label>Reliance</label>
+            <input type="checkbox" name="productAvail" class="form-control" ngModel #name6="ngModel" required>
+            <label>D-Mart</label>
+            <input type="checkbox" name="productAvail" class="form-control" ngModel #name6="ngModel" required>
+            <label>Megastore</label>
+
+            <div *ngIf="name6.errors!=null && 
+        name6.errors.required">
+        Select stores for product availability.
+        </div>
+            
+</div>
+
+<br><input type="submit" name="submit" value="Add Product">
+</form>
+   
+

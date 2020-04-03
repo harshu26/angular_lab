@@ -1,0 +1,38 @@
+<!--data is local template variable-->
+<form  #data="ngForm"  
+(ngSubmit)="addEmployee(data)">
+    <div>   
+    <label>Name</label>
+     <input type="text" ngModel name="name">
+    </div>
+
+    <div>
+    <label>Id</label>
+    <input type="number" ngModel name="id">
+    </div>  
+    
+    <div>
+    <label>Salary</label>
+    <input type="number" ngModel name="salary">
+    </div> 
+
+    <div>
+    <label>Department</label>
+    <input type="text" ngModel name="department">
+    </div> 
+
+    <input type="submit" value="Add Employee" >
+    
+</form>
+ 
+
+<div *ngIf="addedEmp!==null">
+<h3>Employee Added</h3>  
+ Name = {{addedEmp.empName}}
+ Id = {{addedEmp.empId}}
+ Salary = {{addedEmp.empSalary}}
+ Department = {{addedEmp.empDept}}
+</div>
+
+ 
+   

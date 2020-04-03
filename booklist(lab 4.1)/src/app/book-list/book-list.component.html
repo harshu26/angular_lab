@@ -1,0 +1,17 @@
+<p>book-list works!</p>
+
+<table border="1">
+    <tr>
+        <th>Book Id</th>
+        <th>Book Title</th>
+        <th>Book Author</th>
+        <th>Book Year of Publish</th>
+    </tr>
+
+    <tr *ngFor = "let book of books">
+        <td>{{book.id}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.year}}</td>
+    </tr>
+</table>

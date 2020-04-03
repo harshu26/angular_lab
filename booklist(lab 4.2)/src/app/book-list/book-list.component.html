@@ -1,0 +1,37 @@
+<p>book-list works!</p>
+
+<table border="1">
+    <tr>
+        <th>Book Id</th>
+        <th>Book Title</th>
+        <th>Book Author</th>
+        <th>Book Year of Publish</th>
+    </tr>
+
+   <tr>
+  <td>
+    <input type="number" name="bookid" ngModel #idCtrl=ngModel (keyup)="filterById(idCtrl.value)" > 
+
+  </td>
+  <td>
+    <input type="text" name="title" ngModel #titleCtrl=ngModel (keyup)="filterByTitle(titleCtrl.value)" >
+
+  </td>
+  <td>
+    <input type="number" name="year"  ngModel #yearCtrl=ngModel (keyup)="filterByYear(yearCtrl.value)" >
+
+  </td>
+  <td>
+    <input type="text" name="author"  ngModel #authorCtrl=ngModel (keyup)="filterByAuthor(authorCtrl.value)" >
+
+  </td>
+</tr> 
+      
+
+      <tr *ngFor = "let book of books">
+        <td>{{book.id}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.year}}</td>
+    </tr>
+</table>

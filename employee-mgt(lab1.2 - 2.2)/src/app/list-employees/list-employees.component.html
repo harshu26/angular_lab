@@ -1,0 +1,58 @@
+<h1>Listed Employees</h1>
+<table border="1">
+    <tr>
+      <th (click)="orderBy('empId')" class="link">
+        Id
+        
+      </th>
+      <th (click)="orderBy('empName')" class="link"> 
+        Name
+        </th>
+
+       <th>Salary</th>
+       <th>Department</th> 
+       <th>Action</th>
+ </tr>
+ 
+
+<tr *ngFor="let emp of employees|ascend : orderByField">
+    <td>{{emp.empId}}</td> 
+    <td>{{ emp.empName}}</td> 
+    <td>{{ emp.empSalary}}</td> 
+    <td>{{ emp.empDept}}</td> 
+    <td>
+      <button (click)="removeEmployeeById(emp.empId)">Remove</button>  
+    </td>   
+  </tr>
+
+ </table>
+ 
+ 
+<br><form  #data="ngForm"  
+(ngSubmit)="updateEmployee(data)">
+    <div>   
+    <label> Id </label>
+     <input type="number" ngModel name="id">
+    </div>
+
+    <div>
+    <label> Name </label>
+    <input type="text" ngModel name="name">
+    </div>
+    
+    <div>
+    <label> Salary </label>
+    <input type="number" ngModel name="salary">
+    </div>
+
+    <div>
+    <label> Department </label>
+    <input type="text" ngModel name="department">
+    </div>
+    
+    <input type="submit" value="update Employee" >
+    
+</form>
+
+
+  
