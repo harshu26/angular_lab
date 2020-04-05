@@ -23,6 +23,7 @@ export class ListEmployeesComponent implements OnInit {
   ngOnInit(): void {
   }
  
+  //created for sorting the data based on the field.
   orderBy(field:string){
     this.orderByField=field;     
   }

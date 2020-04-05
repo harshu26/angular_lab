@@ -30,6 +30,7 @@ export class BookListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //will be used to save the original values present in the array.
   copyArray(arr:Book[]):Book[]{
     let books2=[];  
     for(let a of arr){
@@ -38,6 +39,7 @@ export class BookListComponent implements OnInit {
     return books2;
     }
 
+   //used for applying search filter on id. 
     filterById(id:number){
       if(id===null || id===undefined){
         this.books=this.copy;
@@ -57,6 +59,7 @@ export class BookListComponent implements OnInit {
       
     }
   
+    //used for applying search filter on name.
     filterByTitle(name:string){
       if(name===null || name===undefined){
         this.books=this.copy;
@@ -73,6 +76,7 @@ export class BookListComponent implements OnInit {
       this.books=titleFilter;
     }
   
+    //used for applying search filter on year.
     filterByYear(year:number){
       if(year===null || year===undefined){
         this.books=this.copy;
@@ -91,6 +95,8 @@ export class BookListComponent implements OnInit {
        this.books=yearFilter;
       
     }
+
+    //used for applying search filter on author.
     filterByAuthor(author:string){
       if(author===null || author===undefined){
         this.books=this.copy;

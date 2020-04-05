@@ -13,6 +13,7 @@ this.client=client;
   books:Book[]=[
  ];
 
+ //used to fetch all the book details present in booklist.json
  fetchBooks():Observable<Book[]>
 {
     let url='assets/booklist.json';

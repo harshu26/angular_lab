@@ -1,5 +1,3 @@
-
-
 import{BasicPhone} from "./basicphone";
 import{SmartPhone} from "./smartphone";
 import{Mobile} from "./mobile";

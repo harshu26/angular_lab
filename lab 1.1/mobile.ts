@@ -10,6 +10,8 @@ export class Mobile{
             this.mobileName=mobileName;
             this.mobileCost=mobileCost;
         }
+
+        //used to display mobile details.
         display()
         {
             console.log("Details of mobile are:"+"MobileId: "+this.mobileId+" "+"MobileName: "+this.mobileName+" "+"MobileCost: "+this.mobileCost);

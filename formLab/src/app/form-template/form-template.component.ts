@@ -18,6 +18,7 @@ export class FormTemplateComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //used for adding product through the form. Name of form will be passed in the argument.
   addProduct(myForm){
     console.log("Id:"+myForm.value.productId+" "+"Name:"+myForm.value.productName+" "+"Cost:"+myForm.value.productCost
     +" "+"Online:"+myForm.value.productOnline+" "+"Availability:"+myForm.value.productAvail+" "+"Category:"+myForm.value.productCategory);

@@ -8,6 +8,8 @@ export class SmartPhone extends Mobile{
             super(mobileId,mobileName,mobileCost);
             this.MobileType=MobileType;
         }
+
+        //first the display method of Mobile will be called then display of SmartPhone will bw called.
         display()
         {
             super.display();

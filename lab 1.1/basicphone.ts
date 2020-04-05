@@ -8,7 +8,9 @@ export class BasicPhone extends Mobile{
             super(mobileId,mobileName,mobileCost);
             this.MobileType=MobileType;
         }
-        display()
+        
+        //will be used to display mobile type. Also the display method of Mobile will be called first
+        display()       
         {
             super.display();
             console.log("MobileType:"+this.MobileType);
